@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOC Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container hidden">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="sidebar-header"><i class="fas fa-shield-virus"></i><span>CyberSec</span></div>
+            <ul class="sidebar-menu">
+                <li><a href="#dashboard" class="nav-link active"><i
+                            class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
+                <li><a href="#alerts" class="nav-link"><i class="fas fa-bell"></i><span>Alerts</span></a></li>
+                <li><a href="#settings" class="nav-link"><i class="fas fa-cog"></i><span>Settings</span></a></li>
+                <li><a href="#reporting" class="nav-link"><i class="fas fa-chart-pie"></i><span>Reporting</span></a>
+                </li>
+            </ul>
+            <div class="sidebar-footer">
+                <p>Version 1.0</p>
+            </div>
+        </nav>
+        <main class="main-content">
+            <!-- Top Header Bar -->
+            <header class="main-header">
+                <div class="header-title">
+                    <h2 id="page-title">Dashboard</h2>
+                </div>
+                <div class="user-profile">
+                    <i class="fas fa-user-circle"></i><span id="user-profile-name">User</span>
+                    <div class="dropdown"><i class="fas fa-caret-down"></i>
+                        <div class="dropdown-content"><a href="#" id="logout-button">Logout</a></div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="content-panels">
+                <!-- Dashboard Panel -->
+                <div id="dashboard" class="panel active">
+                    <div class="dashboard-grid">
+                        <div class="card status-card">
+                            <h3><i class="fas fa-heartbeat"></i> System Status</h3>
+                            <p id="system-status">Protected <i class="fas fa-check-circle"></i></p>
+                        </div>
+                        <div class="card blocked-ips-card">
+                            <h3><i class="fas fa-user-slash"></i> Blocked IPs</h3>
+                            <ul id="blocked-ips-list">
+                                <li>None</li>
+                            </ul>
+                        </div>
+                        <div class="card chart-card">
+                            <h3><i class="fas fa-chart-line"></i> Live Traffic Volume</h3><canvas
+                                id="trafficChart"></canvas>
+                        </div>
+                        <div class="card log-card">
+                            <h3><i class="fas fa-file-alt"></i> Live Traffic Log</h3>
+                            <pre id="traffic-log">Initializing...</pre>
+                        </div>
+                    </div>
+                </div>
+                <!-- Alerts Panel -->
+                <div id="alerts" class="panel">
+                    <div class="card">
+                        <table class="alerts-table">
+                            <thead>
+                                <tr>
+                                    <th>Timestamp</th>
+                                    <th>Level</th>
+                                    <th>Type</th>
+                                    <th>Details</th>
+                                </tr>
+                            </thead>
+                            <tbody id="alerts-table-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- Settings Panel -->
+                <div id="settings" class="panel">
+                    <div class="card">
+                        <form id="settings-form">
+                            <h2>Detection Settings</h2>
+                            <div class="settings-grid">
+                                <div class="form-group"><label for="request-limit">Request Limit (per IP)</label><input
+                                        type="number" id="request-limit" name="REQUEST_LIMIT"><small>Max requests from a
+                                        single IP within the time window before blocking.</small></div>
+                                <div class="form-group"><label for="time-window">Time Window (seconds)</label><input
+                                        type="number" id="time-window" name="TIME_WINDOW"><small>The duration in seconds
+                                        to monitor for the request limit.</small></div>
+                                <div class="form-group"><label for="global-request-limit">Global Request
+                                        Limit</label><input type="number" id="global-request-limit"
+                                        name="GLOBAL_REQUEST_LIMIT"><small>Max total requests per second before a
+                                        volumetric alert is triggered.</small></div>
+                                <div class="form-group"><label for="unblock-duration">Unblock Duration
+                                        (seconds)</label><input type="number" id="unblock-duration"
+                                        name="UNBLOCK_DURATION"><small>How long an IP remains blocked before automatic
+                                        recovery.</small></div>
+                            </div>
+                            <button type="submit" class="form-button">Save Settings</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- Reporting Panel -->
+                <div id="reporting" class="panel">
+                    <div class="reporting-grid">
+                        <div class="card">
+                            <h3><i class="fas fa-chart-pie"></i> Alerts by Type</h3>
+                            <canvas id="alertsTypeChart"></canvas>
+                        </div>
+                        <div class="card">
+                            <h3><i class="fas fa-list-ol"></i> Top 10 Attackers (by IP)</h3>
+                            <table class="reporting-table">
+                                <thead>
+                                    <tr>
+                                        <th>IP Address</th>
+                                        <th>Block Count</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="top-attackers-body">
+                                    <!-- Data will be inserted here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

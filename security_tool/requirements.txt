@@ -1,0 +1,4 @@
+watchdog
+Flask
+Flask-Cors
+bcrypt

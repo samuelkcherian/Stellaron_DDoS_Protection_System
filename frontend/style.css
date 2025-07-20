@@ -1,0 +1,457 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+:root {
+    --bg-dark: #111827;
+    --sidebar-bg: #1f2937;
+    --card-bg: #1f2937;
+    --header-bg: #111827;
+    --primary-text: #f9fafb;
+    --secondary-text: #9ca3af;
+    --accent-blue: #3b82f6;
+    --status-green: #10b981;
+    --border-color: #374151;
+    --level-high: #ef4444;
+    --level-medium: #f97316;
+    --level-info: #3b82f6;
+    --level-critical: #991b1b;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--primary-text);
+    margin: 0;
+}
+
+/* Auth Page Styles */
+.auth-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.auth-box {
+    background-color: var(--card-bg);
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.auth-header h2 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+.auth-header p {
+    color: var(--secondary-text);
+    margin-top: 5px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    color: var(--secondary-text);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    background-color: #374151;
+    color: var(--primary-text);
+    box-sizing: border-box;
+}
+
+.auth-button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--accent-blue);
+    color: #fff;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.auth-button:hover {
+    background-color: #2563eb;
+}
+
+.auth-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+.auth-footer a {
+    color: var(--accent-blue);
+    text-decoration: none;
+}
+
+/* Main App Styles */
+.app-container {
+    display: flex;
+    height: 100vh;
+}
+
+.app-container.hidden {
+    display: none;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: var(--sidebar-bg);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-right: 1px solid var(--border-color);
+}
+
+.sidebar-header {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-header i {
+    margin-right: 12px;
+    color: var(--accent-blue);
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.sidebar-menu li a {
+    display: flex;
+    align-items: center;
+    padding: 15px 10px;
+    color: var(--secondary-text);
+    text-decoration: none;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.sidebar-menu li a:hover {
+    background-color: #374151;
+    color: var(--primary-text);
+}
+
+.sidebar-menu li a.active {
+    background-color: var(--accent-blue);
+    color: #fff;
+    font-weight: 500;
+}
+
+.sidebar-menu li a i {
+    width: 24px;
+    margin-right: 15px;
+    text-align: center;
+}
+
+.sidebar-footer {
+    text-align: center;
+    color: var(--secondary-text);
+    font-size: 0.8em;
+}
+
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: var(--header-bg);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.user-profile>span {
+    margin-right: 5px;
+}
+
+.user-profile>i {
+    margin: 0 5px;
+}
+
+.user-profile .fa-user-circle {
+    font-size: 1.8em;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--card-bg);
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 6px;
+    right: 0;
+}
+
+.dropdown-content a {
+    color: var(--primary-text);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #374151;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.content-panels {
+    padding: 30px;
+    flex-grow: 1;
+}
+
+.panel {
+    display: none;
+}
+
+.panel.active {
+    display: block;
+}
+
+/* Dashboard Grid Styles */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+}
+
+.card h3 {
+    margin-top: 0;
+    font-size: 1em;
+    font-weight: 500;
+    color: var(--secondary-text);
+}
+
+.card h3 i {
+    margin-right: 8px;
+}
+
+.status-card {
+    grid-column: 1 / 2;
+}
+
+.blocked-ips-card {
+    grid-column: 2 / 3;
+}
+
+.chart-card {
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+}
+
+.log-card {
+    grid-column: 1 / 3;
+}
+
+#system-status {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--status-green);
+}
+
+#blocked-ips-list {
+    list-style-type: none;
+    padding: 0;
+    font-family: "Courier New", Courier, monospace;
+    max-height: 100px;
+    overflow-y: auto;
+}
+
+#traffic-log {
+    background-color: #111827;
+    color: var(--secondary-text);
+    padding: 15px;
+    border-radius: 5px;
+    height: 250px;
+    overflow-y: scroll;
+    font-size: 0.9em;
+}
+
+/* Alerts Table Styles */
+.alerts-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9em;
+}
+
+.alerts-table th,
+.alerts-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.alerts-table thead th {
+    background-color: #2a3a4a;
+    font-weight: 500;
+    color: var(--primary-text);
+}
+
+.alerts-table tbody tr:hover {
+    background-color: #2c3e50;
+}
+
+.alert-level {
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 12px;
+    text-align: center;
+    color: #fff;
+    display: inline-block;
+    min-width: 60px;
+}
+
+.level-High {
+    background-color: var(--level-high);
+}
+
+.level-Medium {
+    background-color: var(--level-medium);
+}
+
+.level-Info {
+    background-color: var(--level-info);
+}
+
+.level-Critical {
+    background-color: var(--level-critical);
+}
+
+/* Settings Form Styles */
+.settings-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--primary-text);
+}
+
+.form-group input[type="number"] {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    background-color: #374151;
+    color: var(--primary-text);
+    font-size: 1em;
+}
+
+.form-group small {
+    margin-top: 8px;
+    font-size: 0.8em;
+    color: var(--secondary-text);
+}
+
+.form-button {
+    margin-top: 30px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--accent-blue);
+    color: #fff;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    float: right;
+}
+
+.form-button:hover {
+    background-color: #2563eb;
+}
+
+/* Reporting Panel Styles */
+.reporting-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.reporting-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.reporting-table th,
+.reporting-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.reporting-table thead th {
+    font-size: 0.9em;
+    color: var(--secondary-text);
+}
+
+.reporting-table tbody td {
+    font-family: "Courier New", Courier, monospace;
+}
