@@ -79375,3 +79375,8 @@
 2025/07/24 07:32:51 [error] 23#23: *16290 access forbidden by rule, client: 172.18.0.1, server: , request: "GET / HTTP/1.1", host: "localhost"
 2025/07/24 07:32:51 [error] 23#23: *16291 access forbidden by rule, client: 172.18.0.1, server: , request: "GET / HTTP/1.1", host: "localhost"
 2025/08/11 15:14:01 [emerg] 1#1: host not found in upstream "backend:5000" in /etc/nginx/nginx.conf:8
+2025/08/12 15:21:11 [emerg] 1#1: open() "/etc/nginx/blocklist.conf" failed (2: No such file or directory) in /etc/nginx/nginx.conf:17
+2025/08/12 15:41:29 [emerg] 1#1: open() "/etc/nginx/blocklist.conf" failed (2: No such file or directory) in /etc/nginx/nginx.conf:17
+2025/08/12 15:46:34 [emerg] 1#1: open() "/etc/nginx/blocklist.conf" failed (2: No such file or directory) in /etc/nginx/nginx.conf:17
+2025/08/12 15:54:15 [emerg] 1#1: open() "/etc/nginx/blocklist.conf" failed (2: No such file or directory) in /etc/nginx/nginx.conf:17
+2025/08/12 16:02:01 [emerg] 1#1: open() "/etc/nginx/blocklist.conf" failed (2: No such file or directory) in /etc/nginx/nginx.conf:17

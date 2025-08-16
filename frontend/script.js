@@ -126,6 +126,44 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (error) { console.error("Failed to load reporting summary:", error); }
     }
 
+    // --- AEMTD Integration ---
+
+    async function fetchAEMTDAlerts() {
+        try {
+            const response = await fetch('/get_aemtd_alerts');
+            const alerts = await response.json();
+            const attackLogsTable = document.getElementById('attack-logs');
+
+            alerts.forEach(alert => {
+                // Check if the alert is already in the table to avoid duplicates
+                if (!document.getElementById(`aemtd-${alert.timestamp}`)) {
+                    const row = attackLogsTable.insertRow(1); // Insert after the header row
+                    row.id = `aemtd-${alert.timestamp}`;
+                    row.style.color = '#ff4d4d'; // Make AEMTD alerts stand out
+
+                    row.innerHTML = `
+                    <td>${alert.timestamp}</td>
+                    <td>${alert.source_ip}</td>
+                    <td>AEMTD Detection</td>
+                    <td>${alert.details}</td>
+                `;
+                }
+            });
+        } catch (error) {
+            console.error('Error fetching AEMTD alerts:', error);
+        }
+    }
+
+    // Call this new function along with your existing update function
+    setInterval(() => {
+        // Assuming you have a function that updates logs already, we add to it.
+        // If not, you can just call fetchAEMTDAlerts() directly.
+        fetchAEMTDAlerts();
+    }, 5000); // Refresh every 5 seconds
+
+
+    // --- End of AEMTD Integration ---
+
     // --- Navigation Logic ---
     const pageTitle = document.getElementById('page-title');
     const navLinks = document.querySelectorAll('.nav-link');

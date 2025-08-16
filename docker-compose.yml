@@ -1,29 +1,30 @@
-# docker-compose.yml
-
+version: '3.8'
 
 services:
-  # The Python Flask Application Service
+  # This is the advanced Python backend from your 'security_tool'
   backend:
-    build: ./backend
-    command: gunicorn --bind 0.0.0.0:5000 app:app
+    build: ./security_tool
+    ports:
+      - "5001:5001"
     volumes:
-      - ./backend:/app
-    working_dir: /app
+      - ./security_tool:/app
+      - ./logs:/app/logs
 
-  # The Nginx Proxy Service
+  # Nginx will serve the frontend and act as a reverse proxy
   nginx:
     image: nginx:latest
     ports:
-      - "80:80" # Expose port 80 to the host machine
+      - "80:80"
     volumes:
-      # Mount our custom nginx configuration into the container
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
-      # Mount the blocklist file
-      - ./nginx/blocklist.conf:/etc/nginx/blocklist.conf
-      # Mount a volume for the access logs so our tool can read them
-      - ./logs:/var/log/nginx
+      - ./frontend:/usr/share/nginx/html
     depends_on:
-      - backend # Nginx won't start until the backend is ready
+      - backend
 
-volumes:
-  logs:
+  # The AEMTD Java Proxy is the main entry point for protected traffic
+  aemtd-proxy:
+    build: ./AEMTD_Proxy
+    ports:
+      - "8080:8080"
+    depends_on:
+      - nginx

@@ -123,6 +123,26 @@ def get_reporting_summary():
     }
     return jsonify(summary)
 
+# --- AEMTD Integration ---
+@app.route('/api/aemtd-alert', methods=['POST'])
+def receive_aemtd_alert():
+    """Receives an alert from the AEMTD Java proxy."""
+    data = request.json
+    details = data.get("reason", "AEMTD Threat Detected")
+    source_ip = request.remote_addr
+
+    print(f"Received AEMTD alert from {source_ip}: {details}")
+
+    # Add the alert to your existing alert system
+    alerts.insert(0, {
+        "timestamp": datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+        "level": "critical", # AEMTD alerts are always critical
+        "type": "AEMTD Anomaly",
+        "details": f"{details} (Source: AEMTD Proxy)"
+    })
+    return jsonify({"status": "success", "message": "AEMTD alert received"})
+# --- End of AEMTD Integration ---
+
 def run_api():
     app.run(host='0.0.0.0', port=API_PORT)
 

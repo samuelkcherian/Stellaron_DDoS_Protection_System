@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>AEMTD Monitoring Dashboard</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 2em;
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+        }
+
+        h1 {
+            color: #00ffdd;
+        }
+
+        .alert {
+            border: 1px solid #ff4d4d;
+            background-color: #4d0000;
+            padding: 1em;
+            margin-bottom: 1em;
+            border-radius: 5px;
+        }
+
+        .alert-time {
+            font-size: 0.8em;
+            color: #aaa;
+        }
+    </style>
+    <meta http-equiv="refresh" content="5">
+</head>
+
+<body>
+    <h1>AEMTD Live Attack Feed</h1>
+    <hr>
+    {% for alert in alerts %}
+    <div class="alert">
+        <strong>Threat Detected!</strong><br>
+        Reason: {{ alert.reason }}<br>
+        <span class="alert-time">{{ alert.timestamp }}</span>
+    </div>
+    {% else %}
+    <p>System status: All clear. No threats detected.</p>
+    {% endfor %}
+</body>
+
+</html>

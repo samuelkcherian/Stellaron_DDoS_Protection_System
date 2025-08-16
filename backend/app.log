@@ -182947,3 +182947,143 @@
 2025-08-11 15:18:15,561 - Request received successfully.
 2025-08-11 15:18:15,588 - Request received successfully.
 2025-08-11 15:18:15,596 - Request received successfully.
+2025-08-12 21:09:14,091 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.3:5000
+2025-08-12 21:09:14,091 - [33mPress CTRL+C to quit[0m
+2025-08-12 15:41:31,517 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.2:5000
+2025-08-12 15:41:31,519 - [33mPress CTRL+C to quit[0m
+2025-08-12 21:12:06,689 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.3:5000
+2025-08-12 21:12:06,690 - [33mPress CTRL+C to quit[0m
+2025-08-12 21:17:32,874 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.3:5000
+2025-08-12 21:17:32,874 - [33mPress CTRL+C to quit[0m
+2025-08-12 21:17:32,902 -  * Restarting with watchdog (windowsapi)
+2025-08-12 21:17:33,265 -  * Debugger is active!
+2025-08-12 21:17:33,272 -  * Debugger PIN: 334-511-550
+2025-08-12 15:54:16,384 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.2:5000
+2025-08-12 15:54:16,387 - [33mPress CTRL+C to quit[0m
+2025-08-12 15:54:16,400 -  * Restarting with stat
+2025-08-12 15:54:16,976 -  * Debugger is active!
+2025-08-12 15:54:16,982 -  * Debugger PIN: 141-757-818
+2025-08-12 21:24:45,568 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.3:5000
+2025-08-12 21:24:45,568 - [33mPress CTRL+C to quit[0m
+2025-08-12 21:24:45,586 -  * Restarting with watchdog (windowsapi)
+2025-08-12 21:24:45,976 -  * Debugger is active!
+2025-08-12 21:24:45,982 -  * Debugger PIN: 334-511-550
+2025-08-12 21:31:15,875 -  * Detected change in 'D:\\Professional Documents\\DDoS_Protection_tool\\backend\\app.py', reloading
+2025-08-12 21:31:15,878 -  * Detected change in 'D:\\Professional Documents\\DDoS_Protection_tool\\backend\\app.py', reloading
+2025-08-12 21:31:15,879 -  * Detected change in 'D:\\Professional Documents\\DDoS_Protection_tool\\backend\\app.py', reloading
+2025-08-12 16:01:15,919 -  * Detected change in '/app/app.py', reloading
+2025-08-12 16:01:15,968 -  * Restarting with stat
+2025-08-12 16:01:16,344 -  * Debugger is active!
+2025-08-12 16:01:16,345 -  * Debugger PIN: 141-757-818
+2025-08-12 21:31:16,951 -  * Restarting with watchdog (windowsapi)
+2025-08-12 21:31:17,554 -  * Debugger is active!
+2025-08-12 21:31:17,559 -  * Debugger PIN: 334-511-550
+2025-08-12 16:02:02,537 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.2:5000
+2025-08-12 16:02:02,540 - [33mPress CTRL+C to quit[0m
+2025-08-12 16:02:02,546 -  * Restarting with stat
+2025-08-12 16:02:03,566 -  * Debugger is active!
+2025-08-12 16:02:03,571 -  * Debugger PIN: 110-178-562
+2025-08-12 21:33:21,812 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.3:5000
+2025-08-12 21:33:21,813 - [33mPress CTRL+C to quit[0m
+2025-08-12 21:33:21,828 -  * Restarting with watchdog (windowsapi)
+2025-08-12 21:33:22,354 -  * Debugger is active!
+2025-08-12 21:33:22,359 -  * Debugger PIN: 334-511-550
+2025-08-12 21:39:48,588 -  * Detected change in 'D:\\Professional Documents\\DDoS_Protection_tool\\backend\\app.py', reloading
+2025-08-12 21:39:48,590 -  * Detected change in 'D:\\Professional Documents\\DDoS_Protection_tool\\backend\\app.py', reloading
+2025-08-12 21:39:48,590 -  * Detected change in 'D:\\Professional Documents\\DDoS_Protection_tool\\backend\\app.py', reloading
+2025-08-12 16:09:49,326 -  * Detected change in '/app/app.py', reloading
+2025-08-12 16:09:49,366 -  * Restarting with stat
+2025-08-12 21:39:49,563 -  * Restarting with watchdog (windowsapi)
+2025-08-12 16:09:49,920 -  * Debugger is active!
+2025-08-12 16:09:49,922 -  * Debugger PIN: 110-178-562
+2025-08-12 21:39:50,312 -  * Debugger is active!
+2025-08-12 21:39:50,322 -  * Debugger PIN: 334-511-550
+2025-08-12 21:40:29,752 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.3:5000
+2025-08-12 21:40:29,753 - [33mPress CTRL+C to quit[0m
+2025-08-12 21:40:29,766 -  * Restarting with watchdog (windowsapi)
+2025-08-12 21:40:30,117 -  * Debugger is active!
+2025-08-12 21:40:30,123 -  * Debugger PIN: 334-511-550
+2025-08-12 21:41:35,240 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.3:5000
+2025-08-12 21:41:35,240 - [33mPress CTRL+C to quit[0m
+2025-08-12 21:41:35,253 -  * Restarting with watchdog (windowsapi)
+2025-08-12 21:41:35,617 -  * Debugger is active!
+2025-08-12 21:41:35,622 -  * Debugger PIN: 334-511-550
+2025-08-12 16:12:23,551 - 172.18.0.1 - - [12/Aug/2025 16:12:23] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-08-12 16:12:23,606 - 172.18.0.1 - - [12/Aug/2025 16:12:23] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-08-12 16:12:23,609 - 172.18.0.1 - - [12/Aug/2025 16:12:23] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-08-12 16:12:23,640 - 172.18.0.1 - - [12/Aug/2025 16:12:23] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=9htyq0Rzb4OvHjuyPhOf HTTP/1.1" 200 -
+2025-08-12 16:12:23,757 - 172.18.0.1 - - [12/Aug/2025 16:12:23] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-08-12 21:45:17,658 -  * Detected change in 'D:\\Professional Documents\\DDoS_Protection_tool\\backend\\app.py', reloading
+2025-08-12 21:45:17,659 -  * Detected change in 'D:\\Professional Documents\\DDoS_Protection_tool\\backend\\app.py', reloading
+2025-08-12 21:45:17,659 -  * Detected change in 'D:\\Professional Documents\\DDoS_Protection_tool\\backend\\app.py', reloading
+2025-08-12 21:45:18,430 -  * Restarting with watchdog (windowsapi)
+2025-08-12 16:15:18,559 -  * Detected change in '/app/app.py', reloading
+2025-08-12 16:15:18,641 -  * Restarting with stat
+2025-08-12 21:45:19,231 -  * Debugger is active!
+2025-08-12 21:45:19,243 -  * Debugger PIN: 334-511-550
+2025-08-12 16:15:19,377 -  * Debugger is active!
+2025-08-12 16:15:19,379 -  * Debugger PIN: 110-178-562
+2025-08-12 16:17:01,366 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.2:5000
+2025-08-12 16:17:01,367 - [33mPress CTRL+C to quit[0m
+2025-08-12 16:17:01,369 -  * Restarting with stat
+2025-08-12 16:17:01,818 -  * Debugger is active!
+2025-08-12 16:17:01,819 -  * Debugger PIN: 367-112-833
+2025-08-12 16:17:15,706 - 172.18.0.1 - - [12/Aug/2025 16:17:15] "GET / HTTP/1.1" 200 -
+2025-08-12 16:17:15,740 - 172.18.0.1 - - [12/Aug/2025 16:17:15] "[33mGET /style.css HTTP/1.1[0m" 404 -
+2025-08-12 16:17:15,747 - 172.18.0.1 - - [12/Aug/2025 16:17:15] "[33mGET /script.js HTTP/1.1[0m" 404 -
+2025-08-12 16:17:16,152 - 172.18.0.1 - - [12/Aug/2025 16:17:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-08-12 21:47:43,119 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.3:5000
+2025-08-12 21:47:43,120 - [33mPress CTRL+C to quit[0m
+2025-08-12 21:47:43,132 -  * Restarting with watchdog (windowsapi)
+2025-08-12 21:47:43,482 -  * Debugger is active!
+2025-08-12 21:47:43,487 -  * Debugger PIN: 334-511-550
+2025-08-12 22:01:37,229 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.3:5000
+2025-08-12 22:01:37,229 - [33mPress CTRL+C to quit[0m
+2025-08-12 22:01:37,243 -  * Restarting with watchdog (windowsapi)
+2025-08-12 22:01:37,634 -  * Debugger is active!
+2025-08-12 22:01:37,640 -  * Debugger PIN: 334-511-550
+2025-08-12 16:40:02,014 - 172.18.0.1 - - [12/Aug/2025 16:40:02] "GET / HTTP/1.1" 200 -
+2025-08-12 16:40:02,050 - 172.18.0.1 - - [12/Aug/2025 16:40:02] "[33mGET /style.css HTTP/1.1[0m" 404 -
+2025-08-12 16:40:02,061 - 172.18.0.1 - - [12/Aug/2025 16:40:02] "[33mGET /script.js HTTP/1.1[0m" 404 -
+2025-08-12 16:40:03,320 - 172.18.0.1 - - [12/Aug/2025 16:40:03] "GET / HTTP/1.1" 200 -
+2025-08-12 16:40:03,349 - 172.18.0.1 - - [12/Aug/2025 16:40:03] "[33mGET /style.css HTTP/1.1[0m" 404 -
+2025-08-12 16:40:03,355 - 172.18.0.1 - - [12/Aug/2025 16:40:03] "[33mGET /script.js HTTP/1.1[0m" 404 -
